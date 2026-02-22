@@ -5,11 +5,13 @@ let employees = [
     { name: "Hope", hourlyRate: 18, hoursWorked: 20 }
 ];
 
+// Returns pay for up to 40 hours only
 function calculateBasePay(rate, hours) {
     const baseHours = Math.min(hours, 40);
     return baseHours * rate;
 }
 
+// Returns 1.5x rate for hours over 40
 function calculateOvertimePay(rate, hours) {
     if (hours > 40) {
         const overtimeHours = hours - 40;
@@ -18,6 +20,7 @@ function calculateOvertimePay(rate, hours) {
     return 0; 
 }
 
+// Deducts 15% tax
 function calculateTaxes(grossPay) {
     return grossPay * 0.15;
 }
