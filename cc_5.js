@@ -25,6 +25,7 @@ function calculateTaxes(grossPay) {
     return grossPay * 0.15;
 }
 
+// Added payroll functions
 function processPayroll(employee) {
     const basePay = calculateBasePay(employee.hourlyRate, employee.hoursWorked);
     const overtimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
